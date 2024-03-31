@@ -4,6 +4,7 @@ import './Header.scss'
 import { useState, useEffect, useRef } from 'react'
 import CartDropdown from './cartdropdown/CartDropdown';
 import Link from 'next/link';
+import useClickOutside from '@/app/_hooks/useClickOutSide';
 useRef
 const Header = () => {
     const [openCart, setOpenCart] = useState(false);
@@ -62,20 +63,8 @@ const Header = () => {
     // Click Outside Cart Dropdown
     const refCartDropdown = useRef(null);
     const refUserDropdown = useRef(null);
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-          if (refCartDropdown.current && !refCartDropdown.current.contains(event.target)) {
-            setOpenCart(false);
-          }
-          if (refUserDropdown.current && !refUserDropdown.current.contains(event.target)) {
-            setOpenUser(false);
-          }
-        }
-        window.addEventListener('mousedown', handleClickOutside);
-        return () => {
-          window.removeEventListener('mousedown', handleClickOutside);
-        };
-      }, []);
+    useClickOutside(refCartDropdown,() => setOpenCart(false))
+    useClickOutside(refUserDropdown,() => setOpenUser(false))
     
     return (
         <header className='p-header bg-white px-4'>
