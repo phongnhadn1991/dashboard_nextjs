@@ -1,0 +1,44 @@
+.p-cartDropdown {
+    &_list {
+    }
+    &_item {
+        border-bottom: 1px solid rgb(229, 231, 235);
+        .p-cartItem {
+            &_info {
+                h5 {
+                    color: #232323;
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+            }
+            &_price {
+                font-size: 13px;
+                font-weight: 500;
+            }
+            &_detail {
+                ul {
+                    li {
+                        color: #8C9097;
+                        padding-right: 15px;
+                        position: relative;
+                        font-weight: 400;
+                        &:not(:first-child) {
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                top: 0.25rem;
+                                height: 0.625rem;
+                                width: 1px;
+                                display: block;
+                                background: #999;
+                                opacity: .2;
+                                inset-inline-start: -8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
