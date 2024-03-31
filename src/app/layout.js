@@ -16,8 +16,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-      <Header/>
-        {children}
+        <div className='l-page'>
+          <Header/>
+          <aside className='p-side w-[15rem] bg-[#111c43] fixed z-10 h-[100vh]'>
+            <div className='p-side_logo border-b border-[#1e2e60] flex justify-center items-center h-[60px]'>
+              <p className='text-white text-center uppercase font-normal'>Dashboard MCN</p>
+            </div>
+          </aside>
+          {children}
+        </div>
       </body>
     </html>
   );
