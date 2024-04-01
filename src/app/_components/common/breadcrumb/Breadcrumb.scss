@@ -1,0 +1,22 @@
+.c-breadcrumb {
+    padding: 20px 0;
+    &_list {
+        ul {
+            display: flex;
+            gap: 8px;
+            li {
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                svg {
+                    width: 10px;
+                    height: 10px;
+                }
+                a {
+                    color: #3b82f6;
+                }
+            }
+        }
+    }
+}
