@@ -1,5 +1,5 @@
 import { Roboto } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import Header from "./_components/common/header/Header";
 import Sidebar from "./_components/common/sidebar/Sidebar";
 
@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
         <div className='l-page'>
           <Header/>
           <Sidebar/>
-          {children}
+          <main className="main-wrapper">
+            {children}
+          </main>
         </div>
       </body>
     </html>
