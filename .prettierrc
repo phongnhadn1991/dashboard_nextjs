@@ -1,16 +1,10 @@
 {
-  "semi": true,
-  "tabWidth": 2,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": true,
   "printWidth": 80,
-  "singleQuote": false,
-  "parser": "flow",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
   "trailingComma": "none",
-  "jsxBracketSameLine": true,
-  "prettier/prettier": [
-    "error",
-    {
-      "singleQuote": true,
-      "parser": "flow"
-    }
-  ]
+  "useTabs": false
 }
