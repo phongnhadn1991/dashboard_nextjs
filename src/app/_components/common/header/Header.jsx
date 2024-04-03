@@ -138,7 +138,7 @@ const Header = () => {
               <div className='p-user flex items-center'>
                 <div className='p-user_avarta w-8 h-8 flex items-center justify-center'>
                   <img
-                    src='https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/349799551_5970857749686399_1271567407826670662_n.jpg?stp=dst-jpg_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4GTVdSdMDEsAX-SmVjj&_nc_ht=scontent.fdad3-6.fna&oh=00_AfAtCTP7Uw1Adetx5OPAWc7jUdf_oJSqidef4Qokf0aJdQ&oe=660C3838'
+                    src='./images/AvartaNgoanMC.jpeg'
                     alt=''
                     className='inline-block rounded-full mr-3'
                   ></img>

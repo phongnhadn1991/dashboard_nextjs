@@ -1,5 +1,5 @@
 import { Roboto } from 'next/font/google'
-import '@/app/_assets/css/globals.scss'
+import '@/app/_assets/scss/globals.scss'
 import Header from '../_components/common/header/Header'
 import Sidebar from '../_components/common/sidebar/Sidebar'
 

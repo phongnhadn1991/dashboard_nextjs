@@ -7,9 +7,9 @@ import * as IconSet from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 
 const Satistical = (params) => {
-  const { listSatistical } = params
+  const { listSatistical, ...restParams } = params
   return (
-    <div className='c-satistical'>
+    <div className={`c-satistical ${restParams.className}`}>
       <div className='c-satistical_list grid grid-cols-12 gap-6'>
         {listSatistical.map((item) => (
           <div

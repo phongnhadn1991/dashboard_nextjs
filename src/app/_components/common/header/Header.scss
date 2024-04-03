@@ -1,32 +1,33 @@
 .p-header {
-    &Nav {
-        .p-nav {
-            &_container {
-                display: flex;
-                align-items: stretch;
-                justify-content: space-between;
-            }
-            &_content {
-                display: flex;
-                align-items: stretch;
-                gap: 5px;
-            }
-            &_icon {
-                > svg {
-                    width: 24px;
-                    height: 24px;
-                }
-            }
+  &Nav {
+    .p-nav {
+      &_container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+      &_content {
+        display: flex;
+        align-items: stretch;
+        gap: 5px;
+      }
+      &_icon {
+        > svg {
+          width: 24px;
+          height: 24px;
         }
+      }
     }
+  }
 }
 
 .animate-slow-ping {
-    animation: ping 2s linear infinite;
-    @keyframes ping {
-        75%, 100% {
-            transform: scale(2);
-            opacity: 0;
-        }
+  animation: ping 2s linear infinite;
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
     }
+  }
 }

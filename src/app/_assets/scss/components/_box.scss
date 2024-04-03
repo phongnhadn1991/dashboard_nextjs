@@ -1,0 +1,29 @@
+.c-box {
+  background: #fff;
+  border-radius: 8px;
+  &Header {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(244,244,244,1);
+  }
+  &Body {
+    padding: 20px;
+  }
+  &Footer {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(244,244,244,1);
+  }
+  &_title {
+    position: relative;
+    font-weight: 500;
+    &::after {
+      position: absolute;
+      top: 0.15rem;
+      inset-inline-start: -0.65rem;
+      height: 1rem;
+      width: 0.2rem;
+      border-radius: 0.5rem;
+      content: '';
+      background: linear-gradient(45deg, #a17bf4, #cfb9fc)
+    }
+  }
+}
