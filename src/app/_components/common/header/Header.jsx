@@ -78,7 +78,7 @@ const Header = () => {
   useClickOutside(refUserDropdown, () => setOpenUser(false))
 
   return (
-    <header className='p-header bg-white ps-[15rem] fixed top-0 left-0 w-full h-[60px]'>
+    <header className='p-header bg-white ps-[15rem] fixed top-0 left-0 z-10 w-full h-[60px]'>
       <div className='p-headerNav px-4'>
         <div className='p-nav_container'>
           <div className='p-nav_hamburger flex flex-col items-center justify-center'>

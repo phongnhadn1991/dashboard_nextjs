@@ -10,7 +10,7 @@ import React from 'react'
 import Link from 'next/link'
 const Sidebar = () => {
   return (
-    <aside className='p-sideBar w-[15rem] bg-[#111c43] fixed top-0 left-0 z-10 h-[100vh]'>
+    <aside className='p-sideBar w-[15rem] bg-[#111c43] fixed top-0 left-0 z-30 h-[100vh]'>
       <div className='p-sideBar_logo border-b border-[#1e2e60] flex justify-center items-center h-[60px]'>
         <p className='text-white text-center uppercase font-normal'>
           Dashboard MCN
