@@ -6,10 +6,10 @@ import RecentEmployer from './_components/RecentEmployer/RecentEmployer'
 import { listSatistical } from './_data/Data'
 import { employerSelector } from '@/lib/features/employer/emloyerSelector'
 
-import { useAppSelector } from '@/lib/hook'
+import { useSelector } from 'react-redux'
 
 export default function Home() {
-  const listEmployer = useAppSelector(employerSelector)
+  const listEmployer = useSelector(employerSelector)
 
   return (
     <div className='l-topage'>

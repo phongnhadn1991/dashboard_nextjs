@@ -1,7 +1,6 @@
 'use client'
 import '@/app/_assets/scss/components/_box.scss'
 import employerSlice from '@/lib/features/employer/employerSlice'
-import { useAppDispatch } from '@/lib/hook'
 import {
   ArrowLongRightIcon,
   MapPinIcon,
@@ -10,6 +9,7 @@ import {
   PencilSquareIcon
 } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
+import { useDispatch } from 'react-redux'
 
 const RecentEmployer = (params) => {
   const { listEmployer, ...restParams } = params
@@ -34,7 +34,7 @@ const RecentEmployer = (params) => {
           : 'bg-warning/10 text-warning'
   }
 
-  const dispatch = useAppDispatch()
+  const dispatch = useDispatch()
 
   const removeUser = (idUser) => {
     dispatch(employerSlice.actions.removeById(idUser))
@@ -90,7 +90,7 @@ const RecentEmployer = (params) => {
                 </tr>
               </thead>
               <tbody>
-                {listEmployer.length &&
+                {listEmployer.length ? (
                   listEmployer.map((e, i) => (
                     <tr key={i} className='hover:bg-primary/5'>
                       <td className='border border-gray-200 text-[13.6px] font-medium p-3'>
@@ -173,7 +173,10 @@ const RecentEmployer = (params) => {
                         </div>
                       </td>
                     </tr>
-                  ))}
+                  ))
+                ) : (
+                  <></>
+                )}
               </tbody>
             </table>
           </div>
