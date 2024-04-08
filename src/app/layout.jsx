@@ -1,7 +1,7 @@
 import { Roboto } from 'next/font/google'
 import '@/app/_assets/scss/globals.scss'
-import Header from '../_components/common/header/Header'
-import Sidebar from '../_components/common/sidebar/Sidebar'
+import Header from './_components/common/header/Header'
+import Sidebar from './_components/common/sidebar/Sidebar'
 
 const roboto = Roboto({
   subsets: ['vietnamese'],

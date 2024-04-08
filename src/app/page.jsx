@@ -1,7 +1,7 @@
-import Breadcrumb from '../_components/common/breadcrumb/Breadcrumb'
-import Satistical from '../_components/Satistical/Satistical'
-import RecentEmployer from '../_components/RecentEmployer/RecentEmployer'
-import { listSatistical, listRecentEmployer } from '../_data/Data'
+import Breadcrumb from './_components/common/breadcrumb/Breadcrumb'
+import Satistical from './_components/Satistical/Satistical'
+import RecentEmployer from './_components/RecentEmployer/RecentEmployer'
+import { listSatistical, listRecentEmployer } from './_data/Data'
 
 export default function Home() {
   return (
