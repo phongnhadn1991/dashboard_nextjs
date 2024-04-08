@@ -2,6 +2,7 @@ import { Roboto } from 'next/font/google'
 import '@/app/_assets/scss/globals.scss'
 import Header from './_components/common/header/Header'
 import Sidebar from './_components/common/sidebar/Sidebar'
+import StoreProvider from './StoreProvider'
 
 const roboto = Roboto({
   subsets: ['vietnamese'],
@@ -17,11 +18,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={roboto.className}>
-        <div className='l-page'>
-          <Header />
-          <Sidebar />
-          <main className='main-wrapper'>{children}</main>
-        </div>
+        <StoreProvider>
+          <div className='l-page'>
+            <Header />
+            <Sidebar />
+            <main className='main-wrapper'>{children}</main>
+          </div>
+        </StoreProvider>
       </body>
     </html>
   )

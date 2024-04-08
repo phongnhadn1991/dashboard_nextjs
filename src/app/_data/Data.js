@@ -57,7 +57,7 @@ export const listSatistical = [
   }
 ]
 
-export const listRecentEmployer = [
+export const listEmployerData = [
   {
     id: uuidv4(),
     fullName: 'Mayor Kelly',

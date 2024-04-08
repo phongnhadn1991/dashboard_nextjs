@@ -1,5 +1,7 @@
 'use client'
 import '@/app/_assets/scss/components/_box.scss'
+import employerSlice from '@/lib/features/employer/employerSlice'
+import { useAppDispatch } from '@/lib/hook'
 import {
   ArrowLongRightIcon,
   MapPinIcon,
@@ -10,7 +12,7 @@ import {
 import classNames from 'classnames'
 
 const RecentEmployer = (params) => {
-  const { listRecentEmployer, ...restParams } = params
+  const { listEmployer, ...restParams } = params
 
   const roleTextUser = (num) => {
     return num === '1'
@@ -32,8 +34,10 @@ const RecentEmployer = (params) => {
           : 'bg-warning/10 text-warning'
   }
 
+  const dispatch = useAppDispatch()
+
   const removeUser = (idUser) => {
-    console.log(idUser)
+    dispatch(employerSlice.actions.removeById(idUser))
   }
 
   return (
@@ -86,8 +90,8 @@ const RecentEmployer = (params) => {
                 </tr>
               </thead>
               <tbody>
-                {listRecentEmployer.length &&
-                  listRecentEmployer.map((e, i) => (
+                {listEmployer.length &&
+                  listEmployer.map((e, i) => (
                     <tr key={i} className='hover:bg-primary/5'>
                       <td className='border border-gray-200 text-[13.6px] font-medium p-3'>
                         <div className='flex items-center justify-center'>
