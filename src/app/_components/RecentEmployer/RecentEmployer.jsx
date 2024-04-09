@@ -22,9 +22,19 @@ const RecentEmployer = (params) => {
     const isChecked = event.target.checked
     if (isChecked) {
       setCheckedItems([...checkedItems, itemId])
-      console.log(checkedItems)
+      console.log(itemId)
     } else {
       setCheckedItems(checkedItems.filter((id) => id !== itemId))
+    }
+  }
+
+  const handleCheckboxAll = (event) => {
+    const isChecked = event.target.checked
+    if (isChecked) {
+      const allItemIds = listEmployer.map((e) => e.id)
+      setCheckedItems(allItemIds)
+    } else {
+      setCheckedItems([])
     }
   }
 
@@ -65,6 +75,7 @@ const RecentEmployer = (params) => {
                           name='checkAll'
                           id='checkAll'
                           className='rounded-md'
+                          onChange={handleCheckboxAll}
                         />
                       </label>
                     </div>
